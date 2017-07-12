@@ -1,0 +1,51 @@
+<body>
+    <div class="">
+      <a href="/">Log Out</a>
+      <a href="/profile/edit-profile/{{newest.username}}">Edit Profile</a>
+    </div>
+    <div class="container toplevel">
+      <div class="row col-sm-12">
+        <div class="col-sm-3">
+          <img style="height:200px;" src="/images/front-piano.jpg" alt="">
+        </div>
+        <div class="col-sm-9">
+          <img style="height:200px;"src="/images/wooden-music-box.jpg" alt="">
+        </div>
+      </div>
+    </div>
+    <main>
+      <div class="container biosongs">
+        <div class="row col-sm-12">
+          <div class="col-sm-3 bio">
+            <h2> Welcome, {{newest.first_name}} {{newest.last_name}}</h2>
+            <h4>Bio</h4>
+            <p> Everyone knows everything about anthing then that means we are all one and oone is all us woah owha crazy stuff dude, i know right? </p>
+            <h4>Favorite Genre</h4>
+            <p>{{newest.fav_genre}}</p>
+            <h4>Biggest Musical Influences</h4>
+            <p>{{newest.influences}}
+            <h4>Team</h4>
+            <p>{{newest.team}}</p>
+          </div>
+          <div class="col-sm-9 songs">
+            <h2> Put on some of that !</h2>
+          </div>
+        </div>
+      </div>
+    </main>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- <h1>Welcome Home</h1>
+    {{msg}} -->
+  </body>
