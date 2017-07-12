@@ -11,4 +11,19 @@ router.get('/:username', function(req, res, next) {
   // res.render('profile',{info:data[0]})
 })
 
+router.post('/edited',(req,res)=>{
+  console.log('yeah');
+  linkQuery.updateUser(req.body).then((data)=>{
+    console.log(req.body.username);
+    console.log(data);
+    res.redirect('/profile/' + req.body.username)
+  })
+})
+
+router.get('/delete/:username',(req,res)=>{
+  linkQuery.deleteUser(req.params.username).then(()=>{
+    res.redirect('/')
+  })
+})
+
 module.exports = router;
