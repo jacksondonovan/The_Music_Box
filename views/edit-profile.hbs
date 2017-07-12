@@ -1,0 +1,47 @@
+
+  <section class="backdrop">
+    <div class="littlebox">
+      <a class="cen" href="/profile/:username">Back to Profile</a>
+      <h1 class="cen">Edit Your Profile</h1>
+        <form class="signupform" action="/profile/edited" method="post">
+          <input hidden type="integer" name="id" value="{{user.id}}">
+          <div class="cen">
+            <label for="">Username</label>
+            <input type="text" name="username" value="{{user.username}}" required>
+          </div>
+          <div class="cen">
+            <label for="">First Name</label>
+            <input type="text" name="first_name" value="{{user.first_name}}" required>
+          </div>
+          <div class="cen">
+            <label for="">Last Name</label>
+            <input type="text" name="last_name" value="{{user.last_name}}" required>
+          </div>
+          <div class="cen">
+            <label for="">Quick Bio</label>
+            <input type="text" name="bio" value="{{user.bio}}" required>
+          </div>
+
+
+          <img style="height:200px;" class="cen" src="/public/images/wooden-music-box.jpg" alt="">
+
+          <div class="cen">
+            <label for="">Favorite Genre of Music</label>
+            <input type="text" name="fav_genre" value="{{user.fav_genre}}" required>
+          </div>
+          <div class="cen">
+            <label for="">Musical Influences (song or artist)</label>
+            <input type="text" name="influences" value="{{user.influences}}" required>
+          </div>
+          <div class="cen">
+            <label for="">Select A Team</label>
+            <input type="text" name="team" value="{{user.team}}">
+          </div>
+          <div class="cen">
+            <a href="/profile/delete/{{user.username}}">Delete Profile</a>
+            <button type="submit">Submit Changes</button>
+          </div>
+        </form>
+    </div>
+
+  </section>

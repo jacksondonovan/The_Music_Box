@@ -8,7 +8,10 @@ router.get('/',(req,res)=>{
 
 router.post('/profile',(req,res)=>{
   linkQuery.adduser(req.body).then(()=>{
-    res.redirect('/profile/' + req.body.username)
+    linkQuery.specificuser(req.body.username).then((user)=>{
+      console.log(user[0].username);
+      res.redirect('/profile/' + user[0].username)
+    })
   })
 })
 

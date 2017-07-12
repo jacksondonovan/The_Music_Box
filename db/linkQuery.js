@@ -1,5 +1,9 @@
 const knex = require('./knex')
 
+function specificuser(obj){
+  return knex('users').where('username',obj)
+}
+
 function adduser(obj){
   return knex('users').insert(obj)
 }
@@ -10,5 +14,6 @@ function showProf(obj){
 
 module.exports = {
   adduser,
-  showProf
+  showProf,
+  specificuser
 }
