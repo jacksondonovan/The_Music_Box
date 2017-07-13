@@ -16,10 +16,10 @@
     <main>
       <div class="container biosongs">
         <div class="row col-sm-12">
-          <div class="col-sm-3 bio">
+          <div class="col-sm-3 bio" style="border:2px solid black;">
             <h2> Welcome, {{newest.first_name}} {{newest.last_name}}</h2>
             <h4>Bio</h4>
-            <p> Everyone knows everything about anthing then that means we are all one and oone is all us woah owha crazy stuff dude, i know right? </p>
+            <p> {{newest.bio}} </p>
             <h4>Favorite Genre</h4>
             <p>{{newest.fav_genre}}</p>
             <h4>Biggest Musical Influences</h4>
@@ -27,7 +27,7 @@
             <h4>Team</h4>
             <p>{{newest.team}}</p>
           </div>
-          <div class="col-sm-9 songs">
+          <div class="col-sm-9 songs" style="border:2px solid black;">
             <h2> Put on some of that !</h2>
           </div>
         </div>

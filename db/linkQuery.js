@@ -1,6 +1,6 @@
 const knex = require('./knex')
 
-function specificuser(obj){
+function specificUser(obj){
   return knex('users').where('username',obj)
 }
 
@@ -31,7 +31,7 @@ function deleteUser(objName){
 module.exports = {
   adduser,
   showProf,
-  specificuser,
+  specificUser,
   updateUser,
   deleteUser
 }
