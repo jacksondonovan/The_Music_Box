@@ -16,12 +16,11 @@ router.post('/profile',(req,res)=>{
         var newUser = req.body
         newUser.password = hash
         linkQuery.adduser(newUser).then(()=>{
-          res.redirect('/profile/' + newUser.username)
+          res.redirect('/profile/' + req.body.username)
         })
       })
     }
   })
 })
-
 
 module.exports = router;

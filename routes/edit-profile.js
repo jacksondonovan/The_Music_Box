@@ -9,8 +9,4 @@ router.get('/:username', function(req, res, next) {
   })
 })
 
-// router.post('/edited'),(req,res)=>{
-//
-// }
-
 module.exports = router;

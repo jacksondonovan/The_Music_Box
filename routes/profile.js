@@ -7,8 +7,6 @@ router.get('/:username', function(req, res, next) {
   linkQuery.showProf(req.params.username).then((data)=>{
     res.render('profile',{newest:data[0]})
   })
-  // linkQuery.showProf(req.p).then((data)=>{
-  // res.render('profile',{info:data[0]})
 })
 
 router.post('/edited',(req,res)=>{
