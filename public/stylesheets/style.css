@@ -50,6 +50,8 @@ form div{
 }
 section{
   min-height: 100%;
+  display: flex;
+  justify-content: center;
 }
 .littlebox{
   border:2px solid #faebd7;
@@ -60,6 +62,7 @@ section{
   margin-right: auto;
   background-color: #faebd7;
 }
+
 .warn{
   color:red;
 }
