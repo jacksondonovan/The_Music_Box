@@ -1,4 +1,7 @@
 <style>
+  *{
+  margin-left: 5px;
+  }
   .newsong{
     display: flex;
     justify-content: center;
@@ -38,18 +41,18 @@
     </div>
 
     <div class="songform">
-      <form class="" action="index.html" method="post">
+      <form class="" action="/create-song/new-song" method="post">
         <div class="">
           <label for="">Song Title</label>
           <input type="text" name="song_title" value="">
         </div>
         <div class="">
           <label for="">By:</label>
-          <input type="text" name="for_whom" value="{{user.username}}">
+          <input type="text" name="written_by" value="{{user.username}}">
         </div>
         <div class="">
           <label for="">For whom? Enter their username</label>
-          <input type="text" name="for_whom" value="">
+          <input type="text" name="written_for" value="">
           <h6>(write "me" to indicate a personal song)</h6>
         </div>
         <br>
@@ -68,9 +71,11 @@
         <div class="">
           <input type="text" name="chorus_line_one" value="">
           <input type="text" name="chorus_line_two" value="">
-          <input type="text" name="chorus_ine_three" value="">
-          <input type="text" name="chours_line_four" value="">
+          <input type="text" name="chorus_line_three" value="">
+          <input type="text" name="chorus_line_four" value="">
         </div>
+        <br>
+        <button type="submit">Submit Song</button>
       </form>
     </div>
 

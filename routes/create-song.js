@@ -8,4 +8,11 @@ router.get('/:username', function(req, res, next) {
   })
 })
 
+router.post('/new-song',(req,res)=>{
+  linkQuery.addSong(req.body).then(()=>{
+    console.log("JUST BEFORE ROUTE CHANGE");
+    res.redirect('/profile/' + req.body.written_by)
+  })
+})
+
 module.exports = router;

@@ -8,6 +8,10 @@ function adduser(obj){
   return knex('users').insert(obj)
 }
 
+function addSong(obj){
+  return knex('songs').insert(obj)
+}
+
 function showProf(obj){
   return knex('users').select().where('username',obj)
 }
@@ -24,6 +28,10 @@ function updateUser(obj){
   })
 }
 
+function grabsongs(obj){
+  return knex('songs').select().where('written_by',obj.written_by)
+}
+
 function deleteUser(objName){
   return knex('users').select().where('username',objName).del()
 }
@@ -33,5 +41,7 @@ module.exports = {
   showProf,
   specificUser,
   updateUser,
-  deleteUser
+  deleteUser,
+  addSong,
+  grabsongs
 }
