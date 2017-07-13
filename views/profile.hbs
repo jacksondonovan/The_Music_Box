@@ -28,7 +28,21 @@
             <p>{{newest.team}}</p>
           </div>
           <div class="col-sm-9 songs" style="border:2px solid black;">
-            <h2> Put on some of that !</h2>
+            <div class="songtopbar">
+              <h2> Put on some of that {{newest.fav_genre}}!</h2>
+              <h2><button style="justify-content:flex-end;"><a href="/create-song/{{newest.username}}">New Song</a></button></h2>
+            </div>
+            <div class="">
+              <figure>
+                SONG 1
+              </figure>
+              <figure>
+                SONG 2
+              </figure>
+              <figure>
+                SONG 3
+              </figure>
+            </div>
           </div>
         </div>
       </div>
