@@ -17,6 +17,16 @@ function showProf(obj){
   return knex('users').select().where('username',obj)
 }
 
+// function showboth(obj){
+//   var together = {}
+//   var userinfo = knex('users').select().where('username',obj)
+//   var songinfo = knex('songs').select().where('by_name',obj)
+//   together.userinfo = userinfo
+//   together.songinfo = songinfo
+//   console.log(together);
+//   return together
+// }
+
 function updateUser(obj){
   return knex('users').select().where('username',obj.username).update({
     'username': obj.username,
@@ -49,5 +59,5 @@ module.exports = {
   deleteUser,
   addSong,
   grabsongs,
-  showSongs
+  showSongs,
 }

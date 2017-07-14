@@ -1,7 +1,7 @@
 <body>
     <div class="">
       <a href="/">Log Out</a>
-      <a href="/edit-profile/{{newest.username}}">Edit Profile</a>
+      <a href="/edit-profile/{{databoth.username}}">Edit Profile</a>
     </div>
     <div class="container toplevel">
       <div class="row col-sm-12">
@@ -17,32 +17,33 @@
       <div class="container biosongs">
         <div class="row col-sm-12">
           <div class="col-sm-3 bio" style="border:2px solid black;">
-            <h2> Welcome, {{newest.first_name}} {{newest.last_name}}</h2>
+            <h2> Welcome, {{databoth.username}} {{databoth.last_name}}</h2>
             <h4>Bio</h4>
-            <p> {{newest.bio}} </p>
+            <p> {{databoth.bio}} </p>
             <h4>Favorite Genre</h4>
-            <p>{{newest.fav_genre}}</p>
+            <p>{{databoth.fav_genre}}</p>
             <h4>Biggest Musical Influences</h4>
-            <p>{{newest.influences}}
+            <p>{{databoth.influences}}
             <h4>Team</h4>
-            <p>{{newest.team}}</p>
+            <p>{{databoth.team}}</p>
           </div>
           <div class="col-sm-9 songs" style="border:2px solid black;">
             <div class="songtopbar">
-              <h2> Put on some of that {{newest.fav_genre}}!</h2>
-              <h2><button style="justify-content:flex-end;"><a href="/create-song/{{newest.username}}">New Song</a></button></h2>
+              <h2> You've written {{songLen}} songs!</h2>
+              <h2><button style="justify-content:flex-end;"><a href="/create-song/{{databoth.username}}">New Song</a></button></h2>
             </div>
             <div class="">
               <figure>
                 SONG 1
-                {{songs.line_one}}
-                {{songs.line_two}}
+                {{datasong.song_title}}
               </figure>
               <figure>
                 SONG 2
+                {{datasongtwo.song_title}}
               </figure>
               <figure>
                 SONG 3
+                {{datasongthree.song_title}}
               </figure>
             </div>
           </div>
