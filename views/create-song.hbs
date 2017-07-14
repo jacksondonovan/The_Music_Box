@@ -1,0 +1,83 @@
+<style>
+  *{
+  margin-left: 5px;
+  }
+  .newsong{
+    display: flex;
+    justify-content: center;
+    border: 2px solid #000;
+  }
+  .newsong div{
+    display: flex;
+    flex-direction: row;
+  }
+  .songform{
+    border:2px solid black;
+  }
+  .songform input{
+    display: block;
+    width:30%;
+  }
+</style>
+
+
+<a class="" style="height:15px;" href="/profile/{{user.username}}">Back to Profile</a>
+
+
+<div class="container">
+  <div class="row col-sm-12">
+    <div class="newsong">
+      <h2>Write what you feel,</h2>
+    </div>
+    <div class="newsong">
+      <h3>feel what you write.</h3>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row col-sm-12">
+    <div class="">
+    </div>
+
+    <div class="songform">
+      <form class="" action="/create-song/new-song" method="post">
+        <div class="">
+          <label for="">Song Title</label>
+          <input type="text" name="song_title" value="">
+        </div>
+        <div class="">
+          <label for="">By:</label>
+          <input type="text" name="written_by" value="{{user.username}}">
+        </div>
+        <div class="">
+          <label for="">For whom? Enter their username</label>
+          <input type="text" name="written_for" value="">
+          <h6>(write "me" to indicate a personal song)</h6>
+        </div>
+        <br>
+        <div class="">
+          <label for="">Stanza</label>
+        </div>
+        <div class="">
+          <input type="text" name="line_one" value="">
+          <input type="text" name="line_two" value="">
+          <input type="text" name="line_three" value="">
+          <input type="text" name="line_four" value="">
+        </div>
+        <div class="">
+          <label for="">Chorus</label>
+        </div>
+        <div class="">
+          <input type="text" name="chorus_line_one" value="">
+          <input type="text" name="chorus_line_two" value="">
+          <input type="text" name="chorus_line_three" value="">
+          <input type="text" name="chorus_line_four" value="">
+        </div>
+        <br>
+        <button type="submit">Submit Song</button>
+      </form>
+    </div>
+
+  </div>
+</div>

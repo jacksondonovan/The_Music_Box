@@ -1,13 +1,29 @@
 var express = require('express');
 var router = express.Router();
 var linkQuery = require('../db/linkQuery')
-var knex = require('../db/knex')
+
 /* GET home page. */
+
 router.get('/:username', function(req, res, next) {
   linkQuery.showProf(req.params.username).then((data)=>{
-    res.render('profile',{newest:data[0]})
+    linkQuery.showSongs(data[0]).then((song_data)=>{
+      console.log(req.params.username);
+      for(var i = song_data.length - 1; i > -1; i--){
+        data.push(song_data[i])
+      }
+      var songLength = song_data.length
+      res.render('profile',{
+        databoth:data[0],
+        datasong:data[1],
+        datasongtwo:data[2],
+        datasongthree:data[3],
+        songLen:songLength
+      })
+    })
   })
 })
+
+
 
 router.post('/edited',(req,res)=>{
   console.log('yeah');
@@ -19,9 +35,13 @@ router.post('/edited',(req,res)=>{
 })
 
 router.get('/delete/:username',(req,res)=>{
-  linkQuery.deleteUser(req.params.username).then(()=>{
-    res.redirect('/')
+  linkQuery.deleteSong(req.params.username).then(()=>{
+    linkQuery.deleteUser(req.params.username).then(()=>{
+      res.redirect('/')
+    })
   })
 })
+
+
 
 module.exports = router;
