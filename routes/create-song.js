@@ -15,4 +15,6 @@ router.post('/new-song',(req,res)=>{
   })
 })
 
+//join table or push song data into promise array and access it with data[1]
+
 module.exports = router;

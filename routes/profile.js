@@ -4,7 +4,12 @@ var linkQuery = require('../db/linkQuery')
 /* GET home page. */
 router.get('/:username', function(req, res, next) {
   linkQuery.showProf(req.params.username).then((data)=>{
-    res.render('profile',{newest:data[0]})
+    linkQuery.showSongs(data[0]).then((song_data)=>{
+      console.log(data[0].id);
+      data.push(song_data)
+      console.log(data);
+      res.render('profile',{newest:data[0]})
+    })
   })
 })
 
