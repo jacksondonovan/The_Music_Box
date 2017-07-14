@@ -23,13 +23,6 @@ router.get('/:username', function(req, res, next) {
   })
 })
 
-// router.get('/:username', function(req, res, next) {
-//   linkQuery.showboth(req.params.username).then((data)=>{
-//       console.log(data);
-//       res.render('profile',{newest:data})
-//     })
-// })
-
 
 
 router.post('/edited',(req,res)=>{
