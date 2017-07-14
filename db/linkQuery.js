@@ -47,6 +47,10 @@ function grabsongs(obj){
   return knex('songs').select().where('written_by',obj.written_by)
 }
 
+function deleteSong(objName){
+  return knex('songs').select().where('written_by',objName).del()
+}
+
 function deleteUser(objName){
   return knex('users').select().where('username',objName).del()
 }
@@ -57,7 +61,8 @@ module.exports = {
   specificUser,
   updateUser,
   deleteUser,
+  deleteSong,
   addSong,
   grabsongs,
-  showSongs,
+  showSongs
 }

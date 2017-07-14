@@ -42,8 +42,10 @@ router.post('/edited',(req,res)=>{
 })
 
 router.get('/delete/:username',(req,res)=>{
-  linkQuery.deleteUser(req.params.username).then(()=>{
-    res.redirect('/')
+  linkQuery.deleteSong(req.params.username).then(()=>{
+    linkQuery.deleteUser(req.params.username).then(()=>{
+      res.redirect('/')
+    })
   })
 })
 
