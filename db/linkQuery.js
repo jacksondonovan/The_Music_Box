@@ -9,7 +9,7 @@ function adduser(obj){
 }
 
 function addSong(obj){
-  obj.by_name = obj.written_by
+  // obj.by_name = obj.written_by
   return knex('songs').insert(obj)
 }
 
@@ -40,11 +40,11 @@ function updateUser(obj){
 }
 
 function showSongs(obj){
-  return knex('songs').select().where('by_name',obj.username)
+  return knex('songs').select().where('written_by_id',obj.id)
 }
 
 function grabsongs(obj){
-  return knex('songs').select().where('written_by',obj.written_by)
+  return knex('songs').select().where('written_by_id',obj.id)
 }
 
 function deleteSong(objName){
