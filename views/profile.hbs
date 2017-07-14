@@ -1,4 +1,4 @@
-<body>
+<body ng-app="app">
     <div class="">
       <a href="/">Log Out</a>
       <a href="/edit-profile/{{databoth.username}}">Edit Profile</a>
@@ -36,6 +36,7 @@
               <figure>
                 SONG 1
                 {{datasong.song_title}}
+                <button class="play">Play</button>
               </figure>
               <figure>
                 SONG 2
@@ -50,6 +51,14 @@
         </div>
       </div>
     </main>
+    <prof></prof>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
+    <script src="../routes/profile.js"></script>
+    <script type="text/javascript" src="../modules/components/app.module.js"></script>
+    <!-- <script src="../dependencies_two/jquery.min.js"></script>
+    <script src="../routes/profile.js"></script>
+    <script src="../dependencies_two/less.min.js"></script> -->
+
 
 
 
