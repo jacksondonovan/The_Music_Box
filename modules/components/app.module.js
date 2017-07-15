@@ -1,10 +1,16 @@
 angular.module('app',[])
-  .component('prof',{
+  .component('song',{
     controller: function(){
       const vm = this
       vm.title = 'TITLE ANGULARJS'
       vm.prog = playChord()
-      vm.melody = [20,20,20,20,72,72,72,72,72]
+      vm.g = g
+      vm.c = c
+      vm.d = d
+      vm.melody = [60,60,60,60,60,60,60,60,0,0,0,0]
+      vm.melody2 = [72,72,72,72,0,0,0,0,72,72,72,72]
+      vm.mel = [55,55,55,55,55,55,55,55,0,0,60,60,0,0,0,0,0,0,0,0,0,0]
+      vm.mel2 = [67,67,67,67,0,0,0,0,67,67,67,67,0,0,0,0,72,72,72,72,0,0,0,0,72,72,72,72,0,0]
       vm.noteLength = 1/4
       vm.attack = 1/64
       vm.oscillator
@@ -35,16 +41,33 @@ angular.module('app',[])
         vm.oscillator.stop(time + vm.noteLength);
       }
       vm.playTri = function(){
-        for(var i = 0; i < 8; i++){
+        for(var i = 0; i < 36; i++){
+
           vm.scheduleNote(vm.prog.one[0][i], vm.context.currentTime + (1/2 * i) );
           vm.scheduleNote(vm.prog.one[1][i], vm.context.currentTime + (1/2 * i) );
           vm.scheduleNote(vm.prog.one[2][i], vm.context.currentTime + (1/2 * i) );
+
+          // vm.scheduleNote(g[i], vm.context.currentTime + (1/2 * i));
+          // vm.scheduleNote(g2[i], vm.context.currentTime + (1/2 * i));
+          // vm.scheduleNote(g3[i], vm.context.currentTime + (1/2 * i));
+          // vm.scheduleNote(c[i], vm.context.currentTime + (1/2 * i));
+          // vm.scheduleNote(c2[i], vm.context.currentTime + (1/2 * i));
+          // vm.scheduleNote(c3[i], vm.context.currentTime + (1/2 * i));
+          // vm.scheduleNote(d[i], vm.context.currentTime + (1/2 * i));
+          // vm.scheduleNote(d2[i], vm.context.currentTime + (1/2 * i));
+          // vm.scheduleNote(d3[i], vm.context.currentTime + (1/2 * i));
+
+
+
+
+          // vm.scheduleNote(vm.mel[i], vm.context.currentTime + (1/2 * i));
+          // vm.scheduleNote(vm.mel2[i], vm.context.currentTime + (1/4 * i));
         }
       }
     },
     templateUrl: '/templates/test.hbs'
   })
-  
+
 function playChord(){
   const rando = Math.floor(Math.random()*3)
   const allprogs = [prog145gMajor , prog145cMajor , prog145eMajor]
@@ -60,6 +83,18 @@ class Key {
     this.eighth = eighth
   }
 }
+
+var g = [55,55,55,55,20,20,20,20,55,55,55,55,20,20,20,20,20,20,20,20,55,55,55,55,67]
+var g2 = [59,59,59,59,20,20,20,20,59,59,59,59,20,20,20,20,20,20,20,20,59,59,59,59,67]
+var g3 = [62,62,62,62,20,20,20,20,62,62,62,62,20,20,20,20,20,20,20,20,62,62,62,62,67]
+
+var c = [20,20,20,20,60,60,60,60,20,20,20,20,60,60,60,60,20,20,60,60,20,20,20,20,20]
+var c2 = [20,20,20,20,64,64,64,64,20,20,20,20,64,64,64,64,20,20,64,64,20,20,20,20,20]
+var c3 = [20,20,20,20,67,67,67,67,20,20,20,20,67,67,67,67,20,20,67,67,20,20,20,20,20]
+
+var d = [20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,62,62,20,20,20,20,20,20,20]
+var d2 = [20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,66,66,20,20,20,20,20,20,20]
+var d3 = [20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,69,69,20,20,20,20,20,20,20]
 
 var cMajor = new Key('cMajor',[60],[64],[67],[72])
 var dMajor = new Key('dMajor',[62],[66],[69],[74])

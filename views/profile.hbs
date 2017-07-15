@@ -9,7 +9,7 @@
           <img style="height:200px;" src="/images/front-piano.jpg" alt="">
         </div>
         <div class="col-sm-9">
-          <img style="height:200px;"src="/images/wooden-music-box.jpg" alt="">
+          <img style="height:200px;width:100%;"src="/images/wooden-music-box.jpg" alt="">
         </div>
       </div>
     </div>
@@ -29,28 +29,44 @@
           </div>
           <div class="col-sm-9 songs" style="border:2px solid black;">
             <div class="songtopbar">
-              <h2> You've written {{songLen}} songs!</h2>
+              <h2> You've written {{songLen}} songs! -- Total Songs: {{songTotal}}</h2>
               <h2><button style="justify-content:flex-end;"><a href="/create-song/{{databoth.username}}">New Song</a></button></h2>
             </div>
-            <div class="">
-              <figure>
-                SONG 1
-                {{datasong.song_title}}
-                <prof></prof>
-                <button ng-click="$ctrl.playTri()"></button>
-                <p></p>
+            {{#each allsongs}}
+            <div class="allsongs">
+              <figure >
+                <div class="row col-sm-12" style="margin:10px 10px;border:2px solid black;">
+                  <div class="col-sm-4">
+                    <h4>{{this.song_title}}</h4>
+                    by {{this.written_by}}
+                    <song></song>
+                  </div>
+                  <div class="col-sm-4">
+
+                    <ul style="list-style:none">
+                      <h5>Verse One:</h5>
+                      <li>{{this.line_one}}</li>
+                      <li>{{this.line_two}}</li>
+                      <li>{{this.line_three}}</li>
+                      <li>{{this.line_four}}</li>
+                    </ul>
+                  </div>
+                  <div class="col-sm-4">
+                    <ul style="list-style:none">
+                      <h5>Chorus One:</h5>
+                      <li>{{this.chorus_line_one}}</li>
+                      <li>{{this.chorus_line_two}}</li>
+                      <li>{{this.chorus_line_three}}</li>
+                      <li>{{this.chorus_line_four}}</li>
+                    </ul>
+                  </div>
+                </div>
               </figure>
-              <figure>
-                SONG 2
-                {{datasongtwo.song_title}}
-                <prof></prof>
-              </figure>
-              <figure>
-                SONG 3
-                {{datasongthree.song_title}}
-                <prof></prof>
-              </figure>
+              {{/each}}
             </div>
+
+
+
           </div>
         </div>
       </div>
