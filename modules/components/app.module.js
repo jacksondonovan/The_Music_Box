@@ -41,11 +41,11 @@ angular.module('app',[])
         vm.oscillator.stop(time + vm.noteLength);
       }
       vm.playTri = function(){
-        for(var i = 0; i < 36; i++){
+        for(var i = 0; i < 11; i++){
 
-          vm.scheduleNote(vm.prog.one[0][i], vm.context.currentTime + (1/2 * i) );
-          vm.scheduleNote(vm.prog.one[1][i], vm.context.currentTime + (1/2 * i) );
-          vm.scheduleNote(vm.prog.one[2][i], vm.context.currentTime + (1/2 * i) );
+          vm.scheduleNote(vm.prog.one[0][i], vm.context.currentTime + (1/4 * i) );
+          vm.scheduleNote(vm.prog.one[1][i], vm.context.currentTime + (1/4 * i) );
+          vm.scheduleNote(vm.prog.one[2][i], vm.context.currentTime + (1/4 * i) );
 
           // vm.scheduleNote(g[i], vm.context.currentTime + (1/2 * i));
           // vm.scheduleNote(g2[i], vm.context.currentTime + (1/2 * i));
