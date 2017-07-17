@@ -2,7 +2,6 @@ angular.module('app',[])
   .component('song',{
     controller: function(){
       const vm = this
-      vm.title = 'TITLE ANGULARJS'
       vm.prog = playChord()
       vm.g = g
       vm.c = c
