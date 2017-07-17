@@ -51,6 +51,7 @@ form div{
 }
 
 .pianobackdrop{
+  min-height: 100%;
   background-image: url('../images/front-piano.jpg');
 }
 
@@ -83,6 +84,7 @@ section{
 }*/
 .toplevel div img{
   height:200px;
+  width:100%;
 }
 
 main{
