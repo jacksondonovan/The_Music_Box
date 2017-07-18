@@ -53,8 +53,8 @@ angular.module('sheetmusictable',[])
           top: 'F#'
         }
       }
-      vm.rando = Math.floor(Math.random()*3)
-      vm.progList = [vm.cMajorIIVV,vm.gMajorIIVV,vm.eMajorIIVV]
+      vm.rando = Math.floor(Math.random()*2)
+      vm.progList = [vm.cMajorIIVV,vm.gMajorIIVV]
       vm.chosenProg = vm.progList[vm.rando]
       vm.cMajor = {
         triBase: 'C',
