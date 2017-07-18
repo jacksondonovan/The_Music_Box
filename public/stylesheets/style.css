@@ -34,6 +34,12 @@ img{
   display: flex;
   justify-content: center;
 }
+.horiz{
+  display: flex;
+  flex-direction: row;
+}
+.hoirz .pushover{
+}
 form div{
   margin-bottom: 5px;
 }
@@ -74,14 +80,6 @@ section{
   color:red;
 }
 
-/*.toplevel{
-  display: flex;
-  flex-direction: row;
-  border: 5px solid black;
-  margin: 0;
-  width: 100%;
-  height:200px;
-}*/
 .toplevel div img{
   height:200px;
   width:100%;
@@ -143,4 +141,57 @@ main{
 .songform input{
   display: block;
   width:33%;
+}
+.newandpop{
+  display:flex;flex-direction:row;
+}
+.newandpop h2{
+  margin-left: 10px;
+}
+.newandpop a{
+  text-decoration: none;
+}
+.playandreview{
+  display: flex;
+  flex-direction: row;
+}
+.playandreview a{
+  text-decoration: none;
+  color:#FFF;
+  margin-left: 5px;
+}
+.sheet{
+  width: 100%;
+  border: 2px solid #000;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.sheetheader{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.sheetlines{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.sheetlines table tr{
+  border-top: 2px solid #000;
+  border-bottom: 2px solid #000;
+  border-left: none;
+  border-right: none;
+  width: 100%;
+}
+.sheetlines table tr td{
+  border-right: 2px solid black;
+  width: 25%;
+}
+.sheetlines table{
+  width: 100%;
+}
+.allsongs button a{
+  text-decoration: none;
+  margin-top: 5px;
 }

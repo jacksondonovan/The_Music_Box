@@ -12,6 +12,7 @@ var logIn = require('./routes/log-in')
 var profile = require('./routes/profile');
 var editProfile = require('./routes/edit-profile');
 var createSong = require('./routes/create-song');
+var reviewSong = require('./routes/review-song')
 var app = express();
 
 // view engine setup
@@ -34,6 +35,7 @@ app.use('/log-in',logIn)
 app.use('/profile',profile)
 app.use('/edit-profile',editProfile)
 app.use('/create-song',createSong)
+app.use('/review-song',reviewSong)
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   var err = new Error('Not Found');

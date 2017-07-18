@@ -31,7 +31,10 @@
           <div class="col-sm-9 songs" style="border:2px solid black;">
             <div class="songtopbar">
               <h2> You've written {{songLen}} songs! -- Total Songs: {{songTotal}}</h2>
-              <h2><button style="justify-content:flex-end;"><a href="/create-song/{{databoth.username}}">New Song</a></button></h2>
+              <div class="newandpop">
+                <h2><button style="justify-content:flex-end;"><a href="/create-song/{{databoth.username}}">New Song</a></button></h2>
+                <h2><button style="justify-content:flex-end;"><a href="/create-popdrop/{{databoth.username}}">New Pop Drop</a></button></h2>
+              </div>
             </div>
             {{#each allsongs}}
             <div class="allsongs">
@@ -41,6 +44,7 @@
                     <h4>{{this.song_title}}</h4>
                     By {{this.written_by}}
                     <song></song>
+                    <button style="width:50%;background-color:purple;"><a style="color:#FFF;" href="/review-song/{{this.song_title}}">Review Song</a></button>
                   </div>
                   <div class="col-sm-4">
 

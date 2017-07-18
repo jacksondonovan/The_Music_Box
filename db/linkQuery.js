@@ -45,6 +45,10 @@ function deleteUser(objName){
   return knex('users').select().where('username',objName).del()
 }
 
+function specificSong(obj){
+  return knex('songs').select().where('song_title',obj)
+}
+
 module.exports = {
   adduser,
   showProf,
@@ -54,5 +58,6 @@ module.exports = {
   deleteSong,
   addSong,
   writtenForMe,
-  showSongs
+  showSongs,
+  specificSong
 }
