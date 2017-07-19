@@ -22,7 +22,7 @@
           </div>
           <div class="cen">
             <label for="">Quick Bio</label>
-            <input type="text" name="bio" value="{{user.bio}}" required>
+            <input style="width:300px;" type="text" name="bio" value="{{user.bio}}" required>
           </div>
 
 
@@ -38,11 +38,11 @@
           </div>
           <div class="cen">
             <label for="">Select A Team</label>
-            <input type="text" name="team" value="{{user.team}}">
+            <input style="width:300px;" type="text" name="team" value="{{user.team}}" placeholder="Strings, Brass, Percussion, Woodwind">
           </div>
           <div class="cen">
             <a href="/profile/delete/{{user.username}}">Delete Profile</a>
-            <button type="submit">Submit Changes</button>
+            <button style="margin-left:10px;" type="submit">Submit Changes</button>
           </div>
         </form>
     </div>

@@ -47,7 +47,6 @@ angular.module('app',[])
 function playChord(){
   const rando = Math.floor(Math.random()*3)
   const allprogs = [prog145gMajor , prog145cMajor , prog145eMajor]
-  console.log(allprogs[0].one[0]);
   return allprogs[rando]
 }
 class Key {
