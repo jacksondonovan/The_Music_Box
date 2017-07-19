@@ -129,14 +129,18 @@ main{
 .newsong{
   display: flex;
   justify-content: center;
-  border: 2px solid #000;
+  border: 5px solid #000;
+  background-color: black;
 }
 .newsong div{
   display: flex;
   flex-direction: row;
 }
+.newsong h2,h3{
+  color:#FFF;
+}
 .songform{
-  border:2px solid black;
+  border:5px solid black;
 }
 .songform input{
   display: block;
@@ -194,4 +198,25 @@ main{
 .allsongs button a{
   text-decoration: none;
   margin-top: 5px;
+}
+
+.psongform{
+  height:500px;
+}
+.faebackground{
+  background-color: #faebd7;
+}
+.oneliner{
+  background-color: #faebd7;
+  border:5px solid #000;
+  height:200px;
+  display: flex;
+  flex-direction: column;
+}
+.oneliner div{
+  margin-top: 50px;;
+}
+.oneliner input{
+  margin-left: 5px;
+  height:25px;
 }
